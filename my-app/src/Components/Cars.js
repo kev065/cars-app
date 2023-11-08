@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Car from './Car';
 
-const CarList = () => {
+const Cars = () => {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
@@ -17,4 +17,5 @@ const CarList = () => {
   );
 };
 
-export default CarList;
+export default Cars;
+
