@@ -14,13 +14,13 @@ const Car = ({ car }) => {
       <p>Year: {car.yearOfMake}</p>
       <p>Mileage: {car.mileage} miles</p>
       <p>Price: ${car.price}</p>
-      <img src={car.image} alt={`${car.make} ${car.brand}`} />
+      <img src={car.image} alt={`${car.make} ${car.brand}`} style={{ maxWidth: '100%', height: 'auto' }} />
 
       <button onClick={addToCart}>Add to Cart</button>
-      <p>Items in cart: {cart.length}</p>
     </div>
   );
 };
 
 export default Car;
+
 

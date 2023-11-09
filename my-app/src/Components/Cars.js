@@ -11,7 +11,7 @@ const Cars = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
       {cars && cars.map(car => <Car key={car.id} car={car} />)}
     </div>
   );
