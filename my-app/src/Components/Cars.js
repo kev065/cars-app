@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
+import CartIcon from './CartIcon'; // Import the CartIcon component
 
 function Cars() {
   const [cars, setCars] = useState([]);
@@ -24,6 +25,7 @@ function Cars() {
         <h1>Cars Page</h1>
       </header>
       <section className="content">
+        <CartIcon />
         <h2>Available Cars</h2>
         <div className="card-container">
           {cars.map((car) => (
