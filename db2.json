@@ -1,0 +1,22 @@
+{
+  "cars": [
+    {
+      "make": "Toyota",
+      "brand": "Rav4",
+      "year": "2013",
+      "price": "12000",
+      "mileage": "34532",
+      "picture": null,
+      "id": 1
+    },
+    {
+      "make": "Mazda",
+      "brand": "Demio",
+      "year": "2016",
+      "price": "10000",
+      "mileage": "54000",
+      "picture": null,
+      "id": 2
+    }
+  ]
+}
