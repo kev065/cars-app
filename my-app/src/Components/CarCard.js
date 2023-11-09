@@ -25,13 +25,23 @@ function CarCard({ searchTerm }) {
   // });
 
   function handleBuy(car){
-
-    alert(`You Have Bought a ${car.make} ${car.brand}`)
+    let reply = "" 
+    prompt(`You are about to Buy a ${car.make} ${car.brand}. Type Yes to confirm your Lease`)
+    if (reply === "YES".toLowerCase()){
+      alert(`You have successfully  a ${car.make} ${car.brand} `)
+    }else{
+      alert(`Enter a valid response`)
+    }
   }
 
   function handleLease(car){
-
-    alert (`You Have Leased a ${car.make} ${car.brand}`)
+    let reply = "" 
+    prompt(`You are about to Lease a ${car.make} ${car.brand}. Type Yes to confirm your Lease`)
+    if (reply === "YES".toLowerCase()){
+      alert(`You have successfully leased a ${car.make} ${car.brand} `)
+    }else{
+      alert(`Enter a valid response`)
+    }
   }
 
   return (
