@@ -46,7 +46,19 @@ const SellCarForm = () => {
         }).then(data => {
             console.log(data);
             // Handle the response data in the UI
-        }).catch(error => {
+
+            // Show an alert to inform the user that the form has been received
+        alert('Your form has been received and is being reviewed.');
+        setCarDetails({
+          make: '',
+          brand: '',
+          year: '',
+          price: '',
+          mileage: '',
+          picture: null,
+        });
+      })
+        .catch(error => {
             console.error(error);
             // Handle the error in the UI
         });
