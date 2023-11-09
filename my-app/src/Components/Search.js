@@ -11,7 +11,7 @@ return (
     <div>
         <input
         type="text"
-        placeholder="Search for a recipe..."
+        placeholder="Search for a car..."
         value={searchTerm}
         onChange={(event)=> setSearchTerm(event.target.value)}
         />

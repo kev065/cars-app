@@ -17,12 +17,22 @@ function CarCard({ searchTerm }) {
       .catch((error) => console.error(`Error fetching data:`, error));
   }, []);
 
-  const filteredCars = cars.filter((car) => {
-    if (car.title && searchTerm) {
-      return car.title.toLowerCase().includes(searchTerm.toLowerCase());
-    }
-    return false;
-  });
+  // const filteredCars = cars.filter((car) => {
+  //   if (car.title && searchTerm) {
+  //     return car.title.toLowerCase().includes(searchTerm.toLowerCase());
+  //   }
+  //   return false;
+  // });
+
+  function handleBuy(car){
+
+    alert(`You Have Bought a ${car.make} ${car.brand}`)
+  }
+
+  function handleLease(car){
+
+    alert (`You Have Leased a ${car.make} ${car.brand}`)
+  }
 
   return (
     <div>
@@ -42,6 +52,9 @@ function CarCard({ searchTerm }) {
                 <li>Manufacture: {car.yearOfMake}</li>
                 <li>Mileage: {car.mileage}</li>
                 <li>Price: ${car.price}</li>
+
+                <button onClick={() => handleBuy(car)}>Buy</button>
+                <button onClick={() => handleLease(car)}>Lease</button>
               </ul>
               {/* <ol>
                             {car.instructions.map((instruction, index) =>(
