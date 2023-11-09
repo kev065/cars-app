@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import CartIcon from './CartIcon';
 import { CartContext } from './CartContext';
+import Search from './Search';
 
 function Cars() {
   const [cars, setCars] = useState([]);
@@ -27,12 +28,10 @@ function Cars() {
 
   return (
     <div className="cars-container">
-      <header>
-        <h1>Cars Page</h1>
-      </header>
       <section className="content">
         <CartIcon />
-        <h2>Available Cars</h2>
+        <Search cars={cars} addToCart={addToCart} />
+        <h2>Cars Page</h2>
         <div className="card-container">
           {cars.map((car) => (
             <div key={car.id} className="card">
@@ -43,11 +42,12 @@ function Cars() {
               <p>Mileage: {car.mileage} miles</p>
               <Link to={`/cars/${car.id}`}>View Details</Link>
               <button onClick={() => addToCart(car)}>Add to Cart</button>
+              
             </div>
           ))}
         </div>
 
-        {/* Render the items in the cart */}
+        
         <div>
           <h2>Your Cart</h2>
           {cart.map((cartItem) => (

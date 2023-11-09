@@ -7,34 +7,32 @@ import CarDetails from './Components/CarDetails';
 import SellCarForm from './Components/SellCarForm';
 import CartPage from './Components/CartPage';
 import CartIcon from './Components/CartIcon';
-import { CartProvider } from './Components/CartContext'; 
+import { CartProvider } from './Components/CartContext';
 import './index.css';
 
 function App() {
   return (
-    <CartProvider> 
+    <CartProvider>
       <Router>
-      <nav>
-  <ul>
-    <li>
-      <Link to="/">Home</Link>
-    </li>
-    <li>
-      <Link to="/about">About</Link>
-    </li>
-    <li>
-      <Link to="/cars">Cars</Link>
-    </li>
-    <li>
-      <Link to="/sell">Sell Car</Link>
-    </li>
-    <li>
-      <Link to="/cart">
-        <CartIcon />
-      </Link>
-    </li>
-  </ul>
-</nav>
+        <nav>
+          <Link to="/cart">
+            <CartIcon />
+          </Link>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/cars">Cars</Link>
+            </li>
+            <li>
+              <Link to="/sell">Sell Car</Link>
+            </li>
+          </ul>
+        </nav>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
