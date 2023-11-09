@@ -1,13 +1,13 @@
-.recipe-container {
+.car-container {
     text-align: center;
     padding: 50px;
 }
   
-.recipe-heading{
+.car-heading{
     font-size: 30px;
 }
   
-.recipe{
+.car{
     font-size: 15px;
     font-weight: 400;
     color: chocolate;
