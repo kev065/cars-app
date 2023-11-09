@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./Leasing.css";
 
 const LeaseComponent = () => {
   const [formData, setFormData] = useState({
@@ -25,11 +26,13 @@ const LeaseComponent = () => {
   const handleConfirm = () => {
 
     console.log('Lease details submitted:', formData);
+    alert("Your Details have been recorded a customer care agent will contact you with further details!")
     
     setFormData({
       name: '',
-      idNumber: '',
+      phoneNumber: '',
       duration: '',
+      carmake: '',
     });
     setShowConfirmation(false);
   };
@@ -43,13 +46,18 @@ const LeaseComponent = () => {
         </label>
         <br />
         <label>
-          ID Number:
-          <input type="text" name="idNumber" value={formData.idNumber} onChange={handleChange} />
+          Phone Number:
+          <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} />
         </label>
         <br />
         <label>
           Duration:
           <input type="text" name="duration" value={formData.duration} onChange={handleChange} />
+        </label>
+        <br />
+        <label>
+          Car Make:
+          <input type="text" name="carmake" value={formData.carmake} onChange={handleChange} />
         </label>
         <br />
         <button type="submit">Submit</button>
@@ -59,8 +67,9 @@ const LeaseComponent = () => {
         <div className="confirmation-popup">
           <p>Please confirm your lease request:</p>
           <p>Name: {formData.name}</p>
-          <p>ID Number: {formData.idNumber}</p>
+          <p>ID Number: {formData.phoneNumber}</p>
           <p>Duration: {formData.duration}</p>
+          <p>Carmake: {formData.carmake}</p>
           <button onClick={handleConfirm}>Confirm</button>
         </div>
       )}

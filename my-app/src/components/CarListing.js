@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import "./CarListing.css";
+
 
 class CarListing extends Component {
   state = {

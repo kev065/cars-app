@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import CartIcon from './CartIcon';
 import { CartContext } from './CartContext';
 import Search from './Search';
+import "./Cars.css";
 
 function Cars() {
   const [cars, setCars] = useState([]);
@@ -10,7 +11,7 @@ function Cars() {
   const [cart, setCart] = useContext(CartContext);
 
   useEffect(() => {
-    fetch('http://localhost:3000/Cars')
+    fetch('http://localhost:3000/cars')
       .then((response) => response.json())
       .then((data) => {
         setCars(data);
@@ -42,12 +43,9 @@ function Cars() {
               <p>Mileage: {car.mileage} miles</p>
               <Link to={`/cars/${car.id}`}>View Details</Link>
               <button onClick={() => addToCart(car)}>Add to Cart</button>
-              
             </div>
           ))}
         </div>
-
-        
         <div>
           <h2>Your Cart</h2>
           {cart.map((cartItem) => (

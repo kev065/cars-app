@@ -5,11 +5,14 @@ import About from './components/About';
 import Cars from './components/Cars';
 import CarDetails from './components/CarDetails';
 import LeaseComponent from './components/Leasing';
-// import CarListing from './components/CarListing';
-
+import { CartProvider } from './components/CartContext';
+import CarListing from './components/CarListing';
+import SellCarForm from './components/SellCarForm';
+import "./App.css";
 
 function App() {
   return (
+    <CartProvider>
     <Router>
       <nav>
         <ul>
@@ -25,6 +28,9 @@ function App() {
           <li>
             <Link to="/lease">Lease</Link>
           </li>
+          <li>
+            <Link to="/sell">Sell</Link>
+          </li>
         </ul>
       </nav>
 
@@ -34,8 +40,11 @@ function App() {
         <Route path="/cars" element={<Cars />} />
         <Route path="/cars/:id" element={<CarDetails />} />
         <Route path='/lease' element = {<LeaseComponent />} />
+        <Route path='/sell' element = {<SellCarForm />} />
       </Routes>
     </Router>
+    </CartProvider>
+
   );
 }
 
