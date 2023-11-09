@@ -1,0 +1,15 @@
+.home-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.home-heading{
+  font-size: 30px;
+}
+
+.app-description{
+  font-size: 15px;
+  font-weight: 400;
+  color: chocolate;
+}
+  

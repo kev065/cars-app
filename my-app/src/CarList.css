@@ -1,0 +1,14 @@
+.recipe-container {
+    text-align: center;
+    padding: 50px;
+}
+  
+.recipe-heading{
+    font-size: 30px;
+}
+  
+.recipe{
+    font-size: 15px;
+    font-weight: 400;
+    color: chocolate;
+}
