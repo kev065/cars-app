@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import './CarListing.css'; // Create a CSS file for styling
+import './CarApp.css'; 
 
-class CarListing extends Component {
+class CarApp extends Component {
   state = {
     rating: 0,
     comments: [],
     newComment: '',
-    hoverRating: 0, // Track hover state
+    hoverRating: 0, 
   };
 
   handleStarClick = (rating) => {
@@ -36,7 +36,7 @@ class CarListing extends Component {
   };
 
   handleStartOver = () => {
-    this.setState({ rating: 0, hoverRating: 0 }); // Reset the star rating and hover state
+    this.setState({ rating: 0, hoverRating: 0 }); 
   };
 
   render() {
@@ -75,6 +75,7 @@ class CarListing extends Component {
             </div>
           ))}
           <textarea
+            id={`commentInput_${Date.now()}`} 
             rows="4"
             placeholder="Add a comment..."
             value={newComment}
@@ -87,4 +88,4 @@ class CarListing extends Component {
   }
 }
 
-export default CarListing;
+export default CarApp;
