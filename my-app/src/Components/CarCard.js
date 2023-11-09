@@ -53,8 +53,7 @@ function CarCard({ searchTerm }) {
                 <li>Mileage: {car.mileage}</li>
                 <li>Price: ${car.price}</li>
 
-                <button onClick={() => handleBuy(car)}>Buy</button>
-                <button onClick={() => handleLease(car)}>Lease</button>
+                
               </ul>
               {/* <ol>
                             {car.instructions.map((instruction, index) =>(
@@ -64,9 +63,13 @@ function CarCard({ searchTerm }) {
                             ))}
                         </ol> */}
               {/* <p>{recipe.instructions}</p> */}
+              <button onClick={() => handleBuy(car)}>Buy</button>
+              <button onClick={() => handleLease(car)}>Lease</button>  
             </li>
+            
           ))}
         </ul>
+        
       )}
     </div>
   );
