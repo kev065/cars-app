@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const SellCarForm = () => {
     const [carDetails, setCarDetails] = useState({
@@ -18,11 +19,21 @@ const SellCarForm = () => {
         }
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+
+        // Uploads the image to Cloudinary and get the URL in db2.json
+        const formData = new FormData();
+        formData.append('file', carDetails.picture);
+        formData.append('upload_preset', 'test_boy_2023'); 
+        const res = await axios.post('https://api.cloudinary.com/v1_1/dbh1s3nlh/image/upload', formData); 
+        const imageUrl = res.data.secure_url;
+
+        // Send the form data and image URL to json-server
+        const carData = { ...carDetails, picture: imageUrl };
         fetch('http://localhost:3000/cars', {
             method: 'POST',
-            body: JSON.stringify(carDetails),
+            body: JSON.stringify(carData),
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -41,39 +52,40 @@ const SellCarForm = () => {
         });
     };
 
+
     return (
         <form onSubmit={handleSubmit}>
-            <div style={{ marginBottom: '10px' }}>
+            <div style={{ marginBottom: '25px' }}>
                 <label>
                     Make:
                     <input type="text" name="make" onChange={handleChange} />
                 </label>
             </div>
-            <div style={{ marginBottom: '10px' }}>
+            <div style={{ marginBottom: '25px' }}>
                 <label>
                     Brand:
                     <input type="text" name="brand" onChange={handleChange} />
                 </label>
             </div>
-            <div style={{ marginBottom: '10px' }}>
+            <div style={{ marginBottom: '25px' }}>
                 <label>
                     Year of Make:
                     <input type="number" name="year" onChange={handleChange} />
                 </label>
             </div>
-            <div style={{ marginBottom: '10px' }}>
+            <div style={{ marginBottom: '25px' }}>
                 <label>
                     Price:
                     <input type="number" name="price" onChange={handleChange} />
                 </label>
             </div>
-            <div style={{ marginBottom: '10px' }}>
+            <div style={{ marginBottom: '25px' }}>
                 <label>
                     Mileage:
                     <input type="number" name="mileage" onChange={handleChange} />
                 </label>
             </div>
-            <div style={{ marginBottom: '10px' }}>
+            <div style={{ marginBottom: '25px' }}>
                 <label>
                     Picture:
                     <input type="file" name="picture" onChange={handleChange} />
