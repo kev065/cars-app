@@ -41,8 +41,6 @@ const SellCarForm = () => {
 
         // Show an alert to inform the user that the form has been received
         alert('Your form has been received and is being reviewed.');
-
-        // Clear the form or perform any other necessary actions
         setCarDetails({
           make: '',
           brand: '',
@@ -54,7 +52,6 @@ const SellCarForm = () => {
       })
       .catch((error) => {
         console.error(error);
-        // Handle the error in the UI
       });
   };
 

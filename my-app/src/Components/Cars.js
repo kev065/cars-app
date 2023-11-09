@@ -42,12 +42,9 @@ function Cars() {
               <p>Mileage: {car.mileage} miles</p>
               <Link to={`/cars/${car.id}`}>View Details</Link>
               <button onClick={() => addToCart(car)}>Add to Cart</button>
-              
             </div>
           ))}
         </div>
-
-        
         <div>
           <h2>Your Cart</h2>
           {cart.map((cartItem) => (
