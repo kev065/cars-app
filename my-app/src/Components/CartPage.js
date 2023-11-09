@@ -4,7 +4,7 @@ import { CartContext } from './CartContext';
 const CartPage = () => {
   const [cart] = useContext(CartContext);
 
-  // show subtotal of all cars in the cart
+  
   const subtotal = cart.reduce((total, car) => total + car.price, 0);
 
   return (
