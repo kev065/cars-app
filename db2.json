@@ -17,6 +17,51 @@
       "mileage": "54000",
       "picture": null,
       "id": 2
+    },
+    {
+      "make": "Lexus",
+      "brand": "ES-350",
+      "year": "2019",
+      "price": "25000",
+      "mileage": "13590",
+      "picture": "https://res.cloudinary.com/dbh1s3nlh/image/upload/v1699557549/640px-Mazda_CX-5__KF__1X7A0333_tyzaon.jpg",
+      "id": 3
+    },
+    {
+      "make": "BMW ",
+      "brand": "I8",
+      "year": "2021",
+      "price": "150000",
+      "mileage": "12300",
+      "picture": "https://res.cloudinary.com/dbh1s3nlh/image/upload/v1699557704/I8_lhywrm.jpg",
+      "id": 4
+    },
+    {
+      "make": "BMW",
+      "brand": "G20",
+      "year": "2018",
+      "price": "35000",
+      "mileage": "13200",
+      "picture": "https://res.cloudinary.com/dbh1s3nlh/image/upload/v1699557892/G20_dhbui6.jpg",
+      "id": 5
+    },
+    {
+      "make": "Lexus",
+      "brand": "ES350",
+      "year": "2021",
+      "price": "45000",
+      "mileage": "12450",
+      "picture": "https://res.cloudinary.com/dbh1s3nlh/image/upload/v1699560833/Lexus_ES350_zgczyt.jpg",
+      "id": 6
+    },
+    {
+      "make": "Lexus",
+      "brand": "ES350",
+      "year": "2020",
+      "price": "45000",
+      "mileage": "12360",
+      "picture": "https://res.cloudinary.com/dbh1s3nlh/image/upload/v1699561102/Lexus_ES350_d1ibjl.jpg",
+      "id": 7
     }
   ]
 }
