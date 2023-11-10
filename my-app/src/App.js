@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import CarListing from './Components/CarApp';
+import CarApp from './Components/CarApp';
 
 function App() {
   return (
     <div className="App">
-      <CarListing />
-      <CarListing />
+      <CarApp />
+      <CarApp />
       {/* Add more CarListing components for different cars */}
     </div>
   );
