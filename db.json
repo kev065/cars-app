@@ -1,5 +1,5 @@
 {
-    "cars": [
+  "cars": [
     {
       "id": 1,
       "make": "Toyota",
@@ -105,7 +105,7 @@
       "brand": "RX",
       "yearOfMake": 2023,
       "price": 45000,
-      "mileage": 22000, 
+      "mileage": 22000,
       "image": "https://media.ed.edmunds-media.com/lexus/rx-350/2023/oem/2023_lexus_rx-350_4dr-suv_f-sport_fq_oem_3_815.jpg"
     },
     {

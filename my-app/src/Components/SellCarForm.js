@@ -22,16 +22,16 @@ const SellCarForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-
+        // Uploads the image to Cloudinary and get the URL in db2.json
         const formData = new FormData();
         formData.append('file', carDetails.picture);
         formData.append('upload_preset', 'test_boy_2023'); 
         const res = await axios.post('https://api.cloudinary.com/v1_1/dbh1s3nlh/image/upload', formData); 
         const imageUrl = res.data.secure_url;
 
-
+        // Send the form data and image URL to json-server
         const carData = { ...carDetails, picture: imageUrl };
-        fetch('http://localhost:8000/cars', {
+        fetch('http://localhost:3000/cars', {
             method: 'POST',
             body: JSON.stringify(carData),
             headers: {
@@ -45,7 +45,9 @@ const SellCarForm = () => {
             }
         }).then(data => {
             console.log(data);
-            
+            // Handle the response data in the UI
+
+            // Show an alert to inform the user that the form has been received
         alert('Your form has been received and is being reviewed.');
         setCarDetails({
           make: '',
@@ -58,6 +60,7 @@ const SellCarForm = () => {
       })
         .catch(error => {
             console.error(error);
+            // Handle the error in the UI
         });
     };
 
@@ -100,7 +103,7 @@ const SellCarForm = () => {
                     <input type="file" name="picture" onChange={handleChange} />
                 </label>
             </div>
-            <button  type="submit">Submit</button>
+            <button type="submit">Submit</button>
         </form>
     );
 };

@@ -5,8 +5,10 @@ import About from './components/About';
 import Cars from './components/Cars';
 import CarDetails from './components/CarDetails';
 import LeaseComponent from './components/Leasing';
+import CartIcon from './components/CartIcon';
+import CartPage from './components/CartPage'; // import the CartPage component
 import { CartProvider } from './components/CartContext';
-import CarListing from './components/CarListing';
+
 import SellCarForm from './components/SellCarForm';
 import "./App.css";
 
@@ -31,6 +33,10 @@ function App() {
           <li>
             <Link to="/sell">Sell</Link>
           </li>
+          <li>
+          <Link to="/cart"><CartIcon /></Link>
+          </li>
+
         </ul>
       </nav>
 
@@ -40,6 +46,7 @@ function App() {
         <Route path="/cars" element={<Cars />} />
         <Route path="/cars/:id" element={<CarDetails />} />
         <Route path='/lease' element = {<LeaseComponent />} />
+        <Route path="/cart" element={<CartPage />} /> {/* This line adds a route for the cart page */}
         <Route path='/sell' element = {<SellCarForm />} />
       </Routes>
     </Router>
