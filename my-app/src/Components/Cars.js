@@ -41,12 +41,11 @@ function Cars() {
               <p>Price: ${car.price}</p>
               <p>Mileage: {car.mileage} miles</p>
               <Link to={`/cars/${car.id}`}>View Details</Link>
-              <button onClick={() => addToCart(car)}>Add to Cart</button>
+              {/* <button onClick={() => addToCart(car)}>Add to Cart</button> */}
             </div>
           ))}
         </div>
         <div>
-          <h2>Your Cart</h2>
           {cart.map((cartItem) => (
             <div key={cartItem.id}>
               <h3>{cartItem.make} {cartItem.brand}</h3>
