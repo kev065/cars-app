@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import CarListing from './CarListing';
+import "./CarDetails.css";
 
 function CarDetails() {
   const { id } = useParams();
@@ -39,7 +40,7 @@ function CarDetails() {
           <p>Year: {car.yearOfMake}</p>
           <p>Price: ${car.price}</p>
           <p>Mileage: {car.mileage} miles</p>
-          <img src={car.image} alt={`${car.make} ${car.brand}`} style={{ maxWidth: '100%', height: 'auto' }} />
+          <img src={car.image} alt={`${car.make} ${car.brand}`} />
           <Link to="/cars">Back to Cars</Link>
         </div>
       ) : (
