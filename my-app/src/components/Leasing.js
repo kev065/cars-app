@@ -28,6 +28,21 @@ const LeaseComponent = () => {
     console.log('Lease details submitted:', formData);
     alert("Your Details have been recorded a customer care agent will contact you with further details!")
     
+    fetch('http://localhost:3000/cars', {
+            method: 'POST',
+            body: JSON.stringify(formData),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error('Something went wrong ...');
+            }
+        }).then(data => {
+            console.log(data);
+
     setFormData({
       name: '',
       phoneNumber: '',
@@ -35,7 +50,7 @@ const LeaseComponent = () => {
       carmake: '',
     });
     setShowConfirmation(false);
-  };
+  });
 
   return (
     <div>
