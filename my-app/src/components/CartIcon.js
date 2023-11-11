@@ -2,16 +2,18 @@ import React, { useContext } from 'react';
 import { CartContext } from './CartContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import "./CartIcon.css";
+import { Link } from 'react-router-dom'; // import the Link component
 
 const CartIcon = () => {
   const [cart] = useContext(CartContext);
 
   return (
-    <div className="cart-icon-container"style={{ position: 'fixed', top: '1rem', right: '1rem' }}>
-      <FontAwesomeIcon icon={faShoppingCart} style={{ color: 'red' }} />
-      <p className='cart-count'>Items in cart: {cart.length}</p>
-    </div>
+    <Link to="/cart"> {/* wrap the CartIcon in a Link component */}
+      <div style={{ position: 'fixed', top: '1rem', right: '1rem' }}>
+        <FontAwesomeIcon icon={faShoppingCart} style={{ color: 'red' }} />
+        <p>Items in cart: {cart.length}</p> {/* displays the number of items in the cart */}
+      </div>
+    </Link>
   );
 };
 

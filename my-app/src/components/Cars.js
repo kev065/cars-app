@@ -45,16 +45,7 @@ function Cars() {
               <button onClick={() => addToCart(car)}>Add to Cart</button>
             </div>
           ))}
-        </div>
-        <div>
-          <h2>Your Cart</h2>
-          {cart.map((cartItem) => (
-            <div key={cartItem.id}>
-              <h3>{cartItem.make} {cartItem.brand}</h3>
-              <p>Year: {cartItem.year}</p>
-              <p>Price: ${cartItem.price}</p>
-            </div>
-          ))}
+
         </div>
       </section>
     </div>
