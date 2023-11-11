@@ -27,3 +27,4 @@ You might get an OpenSSL error if you're using Node JS v17 and later versions. T
 
 ### Licence
 This project is licenced under the [MIT Licence](https://github.com/kev065/cars-app/blob/main/LICENSE/).
+
