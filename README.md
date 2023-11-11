@@ -1,5 +1,5 @@
 # cars-app
-This car buying and selling app was built using React to enable people to easily browse, buy or sell their cars.
+This car buying and selling app was built using [React](https://react.dev/) to enable people to easily browse, buy or sell their cars.
 
 **Users can do the following with this app:**
 - browse through a list cars.
@@ -23,7 +23,8 @@ You might get an OpenSSL error if you're using Node JS v17 and later versions. T
 - `$env:NODE_OPTIONS="--openssl-legacy-provider"` for Windows Power Shell.
 
 ### Technologies used 
-- React 
+- [React](https://react.dev/)
 
 ### Licence
 This project is licenced under the [MIT Licence](https://github.com/kev065/cars-app/blob/main/LICENSE/).
+
