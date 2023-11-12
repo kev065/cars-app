@@ -10,7 +10,7 @@ This car buying and selling app was built using [React](https://react.dev/) to e
 1. Clone this repository to your local machine. 
 2. Ensure you have node.js, npm and json server installed globally. 
 3. Navigate to the **cars-app** directory and run the following command: `json-server --watch db.json --port 3000` to enable fetching from db.json file. 
-4. Open a new terminal window and run the following command: `json-server --watch db2.json --port 8000` to enable receiving the submitted info to a local .json file(db2.json)
+4. Open a new terminal window and run the following command: `json-server --watch db2.json --port 8000` to enable receiving the submitted info to a local .json file (db2.json)
 5. Install react dependencies on your project directory by running the following command: `npm install && npm start` 
 6. Your application will now run in your default browser at **port 8000** http://localhost:8000/
 7. You can now test out the app by visiting it and browsing for yourself.
